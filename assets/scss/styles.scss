@@ -1,21 +1,82 @@
 @font-face {
-	font-family: 'Gilroy';
-	src: local('Gilroy-Bold'), url('fonts/Gilroy-Bold.woff2') format('woff2'), url('css/fonts/Gilroy-Bold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'Gilroy';
+    src: local('Gilroy-Bold'), url('fonts/Gilroy-Bold.woff2') format('woff2'), url('css/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-	font-family: 'Gilroy';
-	src: local('Gilroy-Medium'), url('fonts/Gilroy-Medium.woff2') format('woff2'), url('css/fonts/Gilroy-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'Gilroy';
+    src: local('Gilroy-Medium'), url('fonts/Gilroy-Medium.woff2') format('woff2'), url('css/fonts/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-	font-family: 'Gilroy';
-	src: local('Gilroy-ExtraBold'), url('fonts/Gilroy-ExtraBold.woff2') format('woff2'), url('css/fonts/Gilroy-ExtraBold.woff') format('woff');
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'Gilroy';
+    src: local('Gilroy-ExtraBold'), url('fonts/Gilroy-ExtraBold.woff2') format('woff2'), url('css/fonts/Gilroy-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+$color-primary: #111111;
+$color-secondary: #1957ff;
+$color-dark: #000;
+$color-light: #ffffff;
+$color-gray: #7c8286;
+$color-red: #fe3a39;
+$color-green: #00e465;
+$color-blue: #1957ff;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    font-family: "Gilroy", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+nav.navbar {
+    background-color: $color-primary;
+    color: $color-light;
+
+    a {
+        color: $color-light;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+#gbm-hb-logo {
+    filter: invert(1);
+}
+
+#login-account {
+
+    .dropdown-menu {
+        a {
+            color: $color-dark;
+        }
+
+    }
+
+}
+
+#open-account {
+    background: $color-light;
+    border-radius: 100px;
+    color: $color-dark;
+
 }
