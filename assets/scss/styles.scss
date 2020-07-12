@@ -469,7 +469,7 @@ a.go-to-link {
 #features-section {
 
     #features-wrapper {
-        overflow-x: hidden;
+        overflow: hidden;
 
         .item-feature {
             >.row {
@@ -490,7 +490,7 @@ a.go-to-link {
     margin-top: 200px;
 
     #portfolio-slider-wrapper {
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .slider-progress {
@@ -1064,8 +1064,8 @@ a.go-to-link {
         }
     }
 
-    #fees-cards-panel{
-        .card-fee{
+    #fees-cards-panel {
+        .card-fee {
             flex: 0 0 50%;
             max-width: 50%;
         }
@@ -1217,25 +1217,36 @@ a.go-to-link {
         background-attachment: fixed;
         position: relative;
         z-index: 1;
-    }
 
-    #stocks-list {
-        display: flex;
-        justify-content: flex-start;
-        padding: 0px 24px;
-
-        .stock-item {
-            flex: 0 0 33.33%;
+        #bottom-copy {
+            margin-top: 100px;
             margin-bottom: 40px;
-            margin-right: 40px;
+        }
 
-            &:last-child {
-                justify-self: flex-start;
-                margin-right: auto;
-                margin-bottom: 0px;
+        #stocks-list {
+            display: flex;
+            justify-content: flex-start !important;
+            padding: 0px 24px;
+
+            .stock-item {
+                margin-bottom: 40px;
+                margin-right: 0px;
+                max-width: 50%;
+
+                .stock-value {
+                    font-size: 28px;
+                }
+
+                &:last-child {
+                    justify-self: flex-start;
+                    margin-right: auto;
+                    margin-bottom: 0px;
+                }
             }
         }
     }
+
+
 
     #features-section {
 
