@@ -489,6 +489,10 @@ a.go-to-link {
     clear: both;
     margin-top: 200px;
 
+    #portfolio-slider-wrapper{
+        overflow-x: hidden;
+    }
+
     .slider-progress {
         position: relative;
         width: 100%;
