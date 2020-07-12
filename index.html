@@ -1,12 +1,724 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Challenge GBM</title>
-	<link rel="stylesheet" href="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="https://www.gbmhomebroker.com/img/favicon/favicon-196x196.png" sizes="196x196">
+    <!-- CSS libs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MR3FGJP');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <title>GBMhomebroker Trading: Invierte en acciones y fondos de inversión</title>
 </head>
+
 <body>
-	
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR3FGJP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div class="container-fluid p-0" id="gbm-hb-main-wrapper">
+        <nav class="navbar navbar-expand-lg" data-toggle="afix">
+            <a class="navbar-brand" href="/" id="gbm-hb-logo" title="GBMhomebroker"><img src="assets/img/logo-hb.svg" alt="GBMhomebroker" class="img-fluid"></a>
+            <div class="d-lg-none d-sm-block">
+                <span class="nav-item">
+                    <a class="nav-link" id="mb-open-account" href="#" title="Abrir cuenta">Abrir cuenta</a>
+                </span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" title="Trading">Trading</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Wealth Management">Wealth Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Experiencia">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Ayuda">Ayuda</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-0">
+                    <div class="d-xl-none d-sm-block">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Ayuda">Ingresar GBMhomebroker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Ayuda">Ingresar GBMhomebroker PRO</a>
+                        </li>
+                    </div>
+                    <li class="nav-item dropdown d-sm-none" id="login-account">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ingresar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" title="login homebroker">GBMhomebroker</a>
+                            <a class="dropdown-item" href="#" title="login hombroker pro">GBMhomebroker PRO</a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-sm-none">
+                        <a class="btn-block btn-nav" id="open-account" href="#" title="Abrir cuenta">Abrir cuenta</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="general-wrapper">
+            <section id="hero-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-7 col-lg-7">
+                            <h1 class="color-light">Invierte en lo que quieras, cuando quieras<span>.</span></h1>
+                            <div class="subtitle-text">
+                                <p>Compra acciones nacionales e internacionales, ETFs  y fondos de inversión, todo en una sola cuenta fácil de gestionar.</p>
+                                <div class="cta-container">
+                                    <a href="https://auth.gbm.com/signup?client_id=7c464570619a417080b300076e163289&_ga=2.47876836.2101101649.1594523551-1213898080.1594523551" class="btn-link btn-block cta-arrow-left">estoy listo para empezar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="stocks-list">
+                        <div class="col-sm-4 col-md-2 col-lg-2 stock-item" data-aos="zoom-in">
+                            <div class="stock-brand-img"><img src="assets/img/icon-apple.svg" class="img-fluid" alt="apple"></div>
+                            <p class="stock-value">$2,953.00</p>
+                            <p class="stock-indicator positive">+0.83%</p>
+                        </div>
+                        <div class="col-sm-4 col-md-2 col-lg-2 stock-item" data-aos="zoom-in">
+                            <div class="stock-brand-img"><img src="assets/img/icon-amazon.svg" class="img-fluid" alt="amazon"></div>
+                            <p class="stock-value">$2,953.00</p>
+                            <p class="stock-indicator positive">+1.03%</p>
+                        </div>
+                        <div class="col-sm-4 col-md-2 col-lg-2 stock-item" data-aos="zoom-in">
+                            <div class="stock-brand-img"><img src="assets/img/icon-tesla.svg" class="img-fluid" alt="tesla"></div>
+                            <p class="stock-value">$2,953.00</p>
+                            <p class="stock-indicator positive">+1.35%</p>
+                        </div>
+                        <div class="col-sm-4 col-md-2 col-lg-2 stock-item" data-aos="zoom-in">
+                            <div class="stock-brand-img"><img src="assets/img/icon-netflix.svg" class="img-fluid" alt="netflix"></div>
+                            <p class="stock-value">$2,953.00</p>
+                            <p class="stock-indicator positive">+1.12%</p>
+                        </div>
+                        <div class="col-sm-4 col-md-2 col-lg-2 stock-item" data-aos="zoom-in">
+                            <div class="stock-brand-img"><img src="assets/img/icon-cemex.svg" class="img-fluid" alt="cemex"></div>
+                            <p class="stock-value">$2,953.00</p>
+                            <p class="stock-indicator positive">+2.06%</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="subtitle-text" id="bottom-copy" data-aos="fade-up">
+                                <h4>Compra y venta de acciones</h4>
+                                <p>Aprovecha las oportunidades del mercado en el momento correcto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="features-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <h2 data-aos="fade-down">El mercado nunca deja de moverse y ahora tú también puedes operar cuando estás en movimiento</h2>
+                        </div>
+                    </div>
+                    <div class="row" id="features-wrapper">
+                        <div class="col-sm-12 col-md-12 item-feature">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-4 feature-text" data-aos="fade-right">
+                                    <sup>01</sup>
+                                    <h3>Compraventa sencilla</h3>
+                                    <p>No te pierdas ninguna oportunidad del mercado. Compra y vende de manera rápida y confiable</p>
+                                    <div class="cta-download-app">
+                                        <p>Descarga la App próximamente</p>
+                                        <a href="" class="cta-app apple-app" target="_blank" title="Homebroker iOS app">Homebroker iOS app</a>
+                                        <a href="" class="cta-app android-app" target="_blank" title="Homebroker Android app">Homebroker Android app</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-7 col-lg-7 feature-img" data-aos="fade-left">
+                                    <div class="img-feature">
+                                        <img src="assets/img/trading-scroll-01.png" class="img-fluid" alt="compraventa sencilla">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 item-feature">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-4 feature-text" data-aos="fade-right">
+                                    <sup>02</sup>
+                                    <h3>La nueva forma de invertir</h3>
+                                    <p>Encuentra emisoras, ETFs y fondos en el mercado nacional y global</p>
+                                    <div class="cta-download-app">
+                                        <p>Descarga la App próximamente</p>
+                                        <a href="" class="cta-app apple-app" target="_blank" title="Homebroker iOS app">Homebroker iOS app</a>
+                                        <a href="" class="cta-app android-app" target="_blank" title="Homebroker Android app">Homebroker Android app</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-7 col-lg-7 feature-img" data-aos="fade-left">
+                                    <div class="img-feature">
+                                        <img src="assets/img/trading-scroll-02.png" class="img-fluid" alt="compraventa sencilla">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 item-feature">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-4 feature-text" data-aos="fade-right">
+                                    <sup>03</sup>
+                                    <h3>Trade on the go</h3>
+                                    <p>Operación rápida para los traders móviles</p>
+                                    <div class="cta-download-app">
+                                        <p>Descarga la App próximamente</p>
+                                        <a href="" class="cta-app apple-app" target="_blank" title="Homebroker iOS app">Homebroker iOS app</a>
+                                        <a href="" class="cta-app android-app" target="_blank" title="Homebroker Android app">Homebroker Android app</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-7 col-lg-7 feature-img" data-aos="fade-left">
+                                    <div class="img-feature">
+                                        <img src="assets/img/trading-scroll-03.png" class="img-fluid" alt="compraventa sencilla">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-right d-lg-block d-sm-none">
+                        <div class="col-sm-12 col-md-12">
+                            <p class="letter-badge float-right">T.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="demos-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6" data-aos="fade-up">
+                            <h2>Imagen clara del desempeño de tu portfolio.</h2>
+                            <div class="subtitle-text">
+                                <p class="target-slider-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="portfolio-slider-wrapper">
+                        <div class="col-sm-12 col-md46 col-lg-4" id="slider-controller">
+                            <div class="slider-progress">
+                                <span></span>
+                            </div>
+                            <div id="slider-controls">
+                                <span class="pagingSlide"></span>
+                                <div id="slider-arrows">
+                                    <span class="slick-arrow prev-slide"> &lt; </span>
+                                    <span class="slick-arrow next-slide"> &gt; </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12" id="portfolio-slider">
+                            <div class="slider-item row">
+                                <div class="col-sm-12 col-md-12">
+                                    <img src="assets/img/trading-dashboard-01.png" class="img-fluid" alt="dashboard-1" data-text="Crea tu portafolio invirtiendo en las empresas que te gustan.">
+                                </div>
+                            </div>
+                            <div class="slider-item row">
+                                <div class="col-sm-12 col-md-12">
+                                    <img src="assets/img/trading-dashboard-02.png" class="img-fluid" alt="dashboard-2" data-text="Te ofrecemos gráficas y herramientas para tomar decisiones rápidas e informadas.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="fee-categories-section">
+                <div class="container">
+                    <div class="row" id="fees-cards-panel">
+                        <div class="col-sm-4 col-md-4 col-lg-4 card-fee">
+                            <div class="card bg-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">black</h5>
+                                    <p class="card-text">Más de $10,000,000</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>0.10 <sub>%</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 card-fee">
+                            <div class="card bg-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">platinum</h5>
+                                    <p class="card-text">$5,000,001 · $10,000,000</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>0.125 <sub>%</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 card-fee">
+                            <div class="card bg-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">gold</h5>
+                                    <p class="card-text">$3,000,001 · $5,000,000</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>0.125 <sub>%</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 card-fee">
+                            <div class="card bg-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">silver</h5>
+                                    <p class="card-text">$1,000,001 · $3,000,000</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>0.20 <sub>%</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 card-fee">
+                            <div class="card bg-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">inversionista</h5>
+                                    <p class="card-text">menos de $1,000,000</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p>0.125 <sub>%</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 card-info-panel">
+                            <div class="card info-card">
+                                <div class="card-body px-0">
+                                    <h5 class="card-title">Comisiones a tu medida</h5>
+                                    <p class="card-text">Hasta 0.10% por transacción dependiendo de tu monto de operación.</p>
+                                </div>
+                                <div class="card-footer px-0">
+                                    <div class="cta-container">
+                                        <a href="#comparaison-table" class="btn-link btn-block btn-black cta-arrow-left" id="open-comp-table">compáranos con otros</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="over-modal" id="comparaison-table" style="display: none;">
+                    <div class="modal-wrapper">
+                        <div class="close-modal">x</div>
+                        <div class="over-modal-body">
+                            <div class="table-wrapper" id="table-1">
+                                <div class="table-overflow">
+                                    <h2>A diferencia de otros</h2>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>GBMHOMEBROKER</th>
+                                                    <th>Bursanet</th>
+                                                    <th>Accitrade</th>
+                                                    <th>Kuspit</th>
+                                                    <th>Punto trader</th>
+                                                    <th>Scotiatrade</th>
+                                                    <th>e-Vector PRO</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Monto de apertura</td>
+                                                    <td>$1,000 MXN</td>
+                                                    <td>$10,000 MXN</td>
+                                                    <td>$100,000 MXN</td>
+                                                    <td>$100 MXN</td>
+                                                    <td>$10,000 MXN</td>
+                                                    <td>$20,000 MXN</td>
+                                                    <td>$100,000 MXN</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td colspan="2">Comisiones por operación</td>
+                                                    <td></td>
+                                                    <td colspan="6"></td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>De 0 a 1 millón</td>
+                                                    <td>0.25%</td>
+                                                    <td>0.25%</td>
+                                                    <td>0.35%</td>
+                                                    <td>0.40%</td>
+                                                    <td>De 0.55% a 0.15%**</td>
+                                                    <td>De 0.55% a 0.15%** <br>+ cuota fija de $75**</td>
+                                                    <td>Esquema 1: 0.35%</td>
+                                                </tr>
+                                                <tr class="h81">
+                                                    <td>De 1 a 3 millones</td>
+                                                    <td>0.20%</td>
+                                                    <td>0.20%</td>
+                                                    <td>0.35%</td>
+                                                    <td>0.40%</td>
+                                                    <td>0.15%</td>
+                                                    <td>$75 + 0.35%</td>
+                                                    <td>Esquema 2: $1,250 mensual con comisión de 0.15% a partir de $500,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>De 3 a 5 millones</td>
+                                                    <td>0.15%</td>
+                                                    <td>0.20%</td>
+                                                    <td>0.35%</td>
+                                                    <td>0.40%</td>
+                                                    <td>0.15%</td>
+                                                    <td>$75 + 0.35%</td>
+                                                    <td rowspan="3">Esquema 3: $13,750 anual con comisión de 0.15% a partir de $6 millones</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>De 5 a 10 millones</td>
+                                                    <td>0.125%</td>
+                                                    <td>0.15%</td>
+                                                    <td>0.35%</td>
+                                                    <td>0.40%</td>
+                                                    <td>0.15%</td>
+                                                    <td>$75 + 0.35%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Más de 10 millones</td>
+                                                    <td>0.10%</td>
+                                                    <td>0.10%</td>
+                                                    <td>0.35%</td>
+                                                    <td>0.40%</td>
+                                                    <td>0.15%</td>
+                                                    <td>$75 + 0.35%</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>Comisiones administrativas</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>Comisiones por saldo promedio</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>Custodia de valores</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>** El porcentaje dependerá del monto operado</p>
+                                </div>
+                            </div>
+                            <div class="table-wrapper" id="table-2">
+                                <div class="table-overflow">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>GBMHOMEBROKER</th>
+                                                    <th>Bursanet</th>
+                                                    <th>Accitrade</th>
+                                                    <th>Kuspit</th>
+                                                    <th>Punto trader</th>
+                                                    <th>Scotiatrade</th>
+                                                    <th>e-Vector PRO</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Órdenes</td>
+                                                    <td>Avanzadas</td>
+                                                    <td>Avanzadas</td>
+                                                    <td>Básicas</td>
+                                                    <td>Básicas</td>
+                                                    <td>Básicas</td>
+                                                    <td>Básicas</td>
+                                                    <td>Avanzadas</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Stop Loss</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graficadores</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>Indicadores técnicos</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ventas en corto</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Margen intradía</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                    <td>No</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>BMV, SIC, ETF’s, Fondos</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>Análisis fundamental</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>No</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                    <td>Sí</td>
+                                                </tr>
+                                                <tr class="h53">
+                                                    <td>Información en tiempo real</td>
+                                                    <td>Sin costo</td>
+                                                    <td>Con costo</td>
+                                                    <td>Con costo</td>
+                                                    <td>Sin costo</td>
+                                                    <td>Sin costo</td>
+                                                    <td>Con costo</td>
+                                                    <td>Con costo</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="advisors">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5 col-lg-6" data-aos="fade-down">
+                            <h2>Muéstrate como un experto desde el comienzo</h2>
+                            <div class="subtitle-text">
+                                <p class="font-weight-bold">¿Eres un asesor financiero independiente?</p>
+                                <p>Gestiona los contratos de tus clientes y obtén nuestros beneficios.</p>
+                                <div class="cta-container">
+                                    <a href="https://auth.gbm.com/signup?client_id=7c464570619a417080b300076e163289&_ga=2.240700992.2101101649.1594523551-1213898080.1594523551" class="btn-link btn-block btn-black cta-arrow-left">contáctanos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="advisors-features">
+                        <div class="col-sm-12 col-md-4 col-lg-4 advisor-item-feature" data-aos="fade-up">
+                            <sup>01</sup>
+                            <h3>Manejo dual de contratos</h3>
+                            <p>Opera los contratos de manera individual o a través de una cuenta global con una sola instrucción.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 advisor-item-feature" data-aos="fade-up">
+                            <sup>02</sup>
+                            <h3>Servicio personalizado</h3>
+                            <p>Obtén atención de un equipo dedicado a dar seguimiento a tus solicitudes.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 advisor-item-feature" data-aos="fade-up">
+                            <sup>03</sup>
+                            <h3>Automatización de pagos</h3>
+                            <p>Recibe el depósito de las comisiones establecidas con tus clientes de manera directa.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 advisor-item-feature ml-auto align-self-end" data-aos="fade-up">
+                            <sup>04</sup>
+                            <h3>Eventos especiales</h3>
+                            <p>Asiste a eventos exclusivos con expertos internacionales y nacionales en temas financieros y económicos.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 advisor-item-feature align-self-end" data-aos="fade-up">
+                            <sup>05</sup>
+                            <h3>Valores nacionales e internacionales</h3>
+                            <p>Opera las emisoras y ETFs listados en la BMV, BIVA y SIC.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blog-gbm-entries">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <h4>Blog</h4>
+                            <div class="show-all d-sm-none d-lg-block">
+                                <h2>Aprende sobre nuestro enfoque de inversión.</h2>
+                                <h3>Contenido para todo tipo de escenarios</h3>
+                            </div>
+                            <div class="show-mobile d-xl-none d-sm-block">
+                                <h2>Aprendizaje por inversiones.</h2>
+                                <p>Estrategia para todo tipo de entornos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="blog-posts">
+                        <div class="col-sm-12 col-md-4 col-lg-4 blog-post">
+                            <a href="https://blog.gbm.com/mercados-a-la-baja-una-oportunidad-de-inversion/?_ga=2.51488618.2101101649.1594523551-1213898080.1594523551" target="_blank">
+                                <div class="entry-img">
+                                    <img src="assets/img/trading-blog-01.jpg" alt="" class="img-fluid">
+                                </div>
+                                <h2>Una oportunidad de inversión</h2>
+                                <p>Todo lo que sube tiene que bajar</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 blog-post">
+                            <a href="https://blog.gbm.com/trader-novato-vs-experto/?_ga=2.51488618.2101101649.1594523551-1213898080.1594523551" target="_blank">
+                                <div class="entry-img">
+                                    <img src="assets/img/trading-blog-02.jpg" alt="" class="img-fluid">
+                                </div>
+                                <h2>Trader novato vs experto</h2>
+                                <p>¿Te adelantas o reaccionas?</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 blog-post">
+                            <a href="https://blog.gbm.com/albert-einstein-y-tres-consejos-a-considerar/?_ga=2.51488618.2101101649.1594523551-1213898080.1594523551" target="_blank">
+                                <div class="entry-img">
+                                    <img src="assets/img/trading-blog-03.jpg" alt="" class="img-fluid">
+                                </div>
+                                <h2>Tres consejos para atesorar</h2>
+                                <p>El interés compuesto</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-12 text-center">
+                            <p><a href="https://blog.gbm.com/?_ga=2.51488618.2101101649.1594523551-1213898080.1594523551" target="_blank" class="go-to-link">Ver mas artículos</a></p>
+                        </div>
+                    </div>
+                    <div class="row" id="form-newsletter">
+                        <div class="col-sm-12 col-md-12">
+                            <h2>Suscríbete a nuestro blog</h2>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <form action="" method="" id="subscription-newsletter">
+                                <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                            </form>
+                            <div class="cta-container">
+                                <button type="submit" form="subscription-newsletter" class="btn-action btn-block btn-black cta-arrow-left">suscribírme</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>Descubre</h2>
+                        <p><a href="">Blog</a></p>
+                    </div>
+                </div>
+                <div class="row" id="footer-info">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <h4>¿Necesitas ayuda?</h4>
+                        <h2><a href="mailto:homebroker@gbm.com.mx" class="go-to-link">homebroker@gbm.com.mx</a></h2>
+                        <p class="phone">
+                            int. <a href="tel:018004264663" class="go-to-link"> 01 800 426 4663</a>
+                        </p>
+                        <p class="phone">
+                            cdmx. <a href="tel:54805846" class="go-to-link"> 5480 5846</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <h4>¿Eres persona moral?</h4>
+                        <h2><a href="mailto:apertura@gbm.com.mx" class="go-to-link">apertura@gbm.com.mx</a></h2>
+                        <p class="phone">
+                            int. <a href="tel:018004276537" class="go-to-link"> 01 800 427 6537</a>
+                        </p>
+                        <p class="phone">
+                            cdmx. <a href="tel:54817888" class="go-to-link"> 5481 7888</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <h4>¿Eres asesor financiero?</h4>
+                        <h2><a href="mailto:advisor@gbm.com.mx" class="go-to-link">advisor@gbm.com.mx</a></h2>
+                        <p class="phone">
+                            int. <a href="tel:018004264663" class="go-to-link"> 01 800 426 4663</a>
+                        </p>
+                        <p class="phone">
+                            cdmx. <a href="tel:54807038" class="go-to-link"> 5480 7038</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row" id="footer-tycs">
+                    <div class="col-sm-12 d-flex align-content-center justify-content-start">
+                        <p class="footer-anchor"><a href="https://www.gbmhomebroker.com/pdf/GBMhomebrokerAvisoDePrivacidad.pdf" class="go-to-link">Aviso de privacidad</a></p>
+                        <p class="footer-anchor"><a href="https://www.gbmhomebroker.com/pdf/GBMhomebrokerTerminosCondiciones.pdf" class="go-to-link">Términos y Condiciones</a></p>
+                    </div>
+                </div>
+                <div class="row" id="footer-copy">
+                    <div class="col-sm-12 col-md-12 d-flex" id="footer-copy-wrapper">
+                        <div class="footer-logo-img" id="footer-logo-gbm"><a href="https://www.gbm.com.mx/" title="GBM"><img src="assets/img/logo-gbm.svg" alt="GBM" class="img-fluid"></a></div>
+                        <p class="footer-copy-text">GBMHOMEBROKER fue creado por GBM, Grupo Bursátil Mexicano, una institución financiera con más de 35 años de experiencia en inversiones.</p>
+                        <div class="footer-logo-img" id="footer-logo-sello"><img src="assets/img/sello.svg" alt="AMPICI" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScript libs -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
