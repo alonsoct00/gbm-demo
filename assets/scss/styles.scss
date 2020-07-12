@@ -489,7 +489,7 @@ a.go-to-link {
     clear: both;
     margin-top: 200px;
 
-    #portfolio-slider-wrapper{
+    #portfolio-slider-wrapper {
         overflow-x: hidden;
     }
 
@@ -968,6 +968,122 @@ a.go-to-link {
 
 }
 
+@media only screen and (min-width : 768px) and (max-width : 1024px),
+(min-device-width : 768px) and (max-device-width : 1024px) {
+
+    #gbm-hb-main-wrapper {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 16px 32px !important;
+
+        .navbar-toggler-icon {
+            width: 16px;
+            height: 16px;
+            background: url('../img/icon-mobile.svg') no-repeat 0px center;
+            background-size: 100%;
+            filter: invert(1);
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                outline: none;
+            }
+        }
+
+        #gbm-hb-logo {
+            filter: invert(1);
+            text-indent: -99999px;
+            width: 32px;
+            height: 32px;
+            background: url(../img/icon-hb.svg) no-repeat 0px center;
+            background-size: 100%;
+            line-height: normal;
+        }
+
+        #mb-open-account {
+            font-size: 15px;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 15px;
+        }
+
+        #login-account {
+            display: none !important;
+        }
+
+        &.fixed-top {
+            #mb-open-account {
+                filter: none;
+                color: #000;
+
+            }
+
+            .navbar-toggler-icon {
+                filter: none;
+            }
+
+            .nav-item {
+                a.nav-link {
+                    color: #fff;
+                }
+            }
+
+        }
+
+        .collapsing {
+            background: #000;
+            padding: 16px 24px 24px 24px;
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            top: 60px;
+        }
+
+        .collapse.show {
+            display: block;
+            background: #000;
+            padding: 16px 24px 24px 24px;
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            top: 60px;
+        }
+    }
+
+    #stocks-list {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0px 24px;
+
+        .stock-item {
+            margin-bottom: 40px;
+        }
+    }
+
+    #fees-cards-panel{
+        .card-fee{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    #advisors {
+        #advisors-features {
+
+
+            .advisor-item-feature {
+                margin: 0px auto 56px auto !important;
+
+            }
+        }
+    }
+}
+
+
 @media only screen and (max-width : 767px),
 (max-device-width : 767px) {
 
@@ -1095,12 +1211,23 @@ a.go-to-link {
         }
     }
 
+    #hero-section {
+        background: url(../img/trading-intro.jpg) no-repeat -440px 0px #000;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 1;
+    }
+
     #stocks-list {
         display: flex;
+        justify-content: flex-start;
+        padding: 0px 24px;
 
         .stock-item {
             flex: 0 0 33.33%;
             margin-bottom: 40px;
+            margin-right: 40px;
 
             &:last-child {
                 justify-self: flex-start;
